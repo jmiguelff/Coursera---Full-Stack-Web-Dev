@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML DEMO</title>
+    <meta name="author" content="Joao Ferreira">
+    <link href="html_example_css_file.css" rel="stylesheet" type="text/css">
+    <style>
+      h1:hover {color:red}
+      table, td, th {border: 1px solid black; padding: 15px}
+    </style>
+  </head>
+  <body>
+    <h1><i>My first heading</i></h1>
+    <p><em>My first paragraph</em></p>
+    <h1 style="background:lightblue">My second heading</h1>
+    <p><mark>My second paragraph</mark></p>
+    <h1>My <sub>third</sub> <sub><sub>heading</sub></sub></h1>
+    <button>Click Me</button>
+    <section>
+      <h1>This is a section</h1>
+      <p>Smaller</p>
+    </section>
+    <ul id="biglist">
+      <li id="list">This is a list</li>
+      <li>Other point</li>
+      <li>Pretty ugly</li>
+    </ul>
+    <!-- Fuck this syntax -->
+    <ol type="A">
+      <li>This is first</li>
+      <li>This is second</li>
+    </ol>
+    <table>
+      <thead>
+        <tr>
+          <th><p style="color:black">Skull</p></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><img width="200" height="200" src="picture1.gif"></td></tr>
+      </tbody>
+    </table>
+    <div style="background:lightblue; padding: 15px">
+      <a href="https://www.gmail.com/"><button>Gmail</button></a>
+    </div>
+    <!-- Does not work cause of link -->
+    <form action="http://wwww.google.com/" method="get">
+      <p>Please enter any feedback you have.</p>
+      <textarea rows="3" cols="60" name="feedback">
+        Please enter your text here
+      </textarea>
+      <br>
+      <input type="submit" value="Send">
+    </form>
+    <br>
+    <form>
+      <fieldset>
+        <legend style="padding: 15px">Personal Information</legend>
+        First name? <input style="padding: 3px" type="text" name="firstName">
+        Last name? <input style="padding: 3px" type="text" name="lastName">
+        <br>
+        <br>
+        <input type="submit" value="Send to Server">
+      </fieldset>
+    </form>
+  </body>
+</html>

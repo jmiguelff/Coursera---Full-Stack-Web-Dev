@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Smile Game</title>
+    <style>
+      div {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+      }
+
+      img {
+        position: absolute;
+      }
+
+      #rightSide {
+        left: 500px;
+        border-left: 1px solid black;
+      }
+    </style>
+  </head>
+  <body id="theBody" onload="generateFaces()">
+    <h1>Matching Game</h1>
+    <p>Click on the extra smiling face on the left</p>
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+    <script>
+      var numberOfFaces = 5;
+      var theLeftSide = document.getElementById("leftSide");
+
+      function generateFaces() {
+        var i = 0;
+        for(i = 0; i < numberOfFaces; i++) {
+          var smileyTop = 0;
+          var smileyLeft = 0;
+          var smiley = document.createElement("img");
+          smiley.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+          smiley.width = 100;
+          // Get random top and left values
+          smileyTop = Math.random() * 401;
+          smileyTop = Math.floor(smileyTop);
+          smileyLeft = Math.random() * 401;
+          smileyLeft = Math.floor(smileyLeft);
+          smiley.style.top = smileyTop + "px";
+          smiley.style.left = smileyLeft + "px";
+          theLeftSide.appendChild(smiley);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Love Finder Ltd</title>
+    <meta name="author" content="Joao Ferreira">
+    <style>
+      fieldset {
+        background: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px
+      }
+      label {
+        min-width: 180px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+      }
+      .label_cb {
+        min-width: auto
+      }
+      .range_left {
+        min-width: 60px;
+        text-align: center;
+        background: red;
+        color: white;
+      }
+      .range_right {
+        min-width: 60px;
+        text-align: center;
+        background: purple;
+        color: white;
+      }
+      textarea {
+        width: 360px;
+        height: 50px
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Please Enter Your Details To Find Love</h1>
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+          enctype="multipart/form-data" method="post">
+      <fieldset>
+        <legend>Profile Photo</legend>
+        <label for="profileImg">Your profile photo:</label>
+        <input type="file" name="profileImg" id="profileImg" required><br>
+        <label for="preview">Image Preview:</label>
+        <img id="preview">
+      </fieldset>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" value="male" required>
+        <label class="label_cb" for="gender">Male</label>
+        <input type="radio" id="gender" name="gender" value="female" required>
+        <label class="label_cb" for="gender">Female</label><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="18" required><br>
+        <label for="birth">Date of birth:</label>
+        <input type="date" id="birth" name="birth"><br>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option selected disabled>No selection</option>
+          <option value="portugal">Portugal</option>
+          <option value="italy">Italy</option>
+          <option value="spain">Spain</option>
+          <option value="germany">Germany</option>
+          <option value="france">France</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Indicators</legend>
+        <label for="height">Height:</label>
+        <label class="range_left" for="height">Short</label>
+        <input type="range" id="height" name="height" min="0" max="100"
+               value="50">
+        <label class="range_right" for="height">Tall</label><br>
+        <label for="salary">Salary:</label>
+        <label class="range_left" for="salary">Poor</label>
+        <input type="range" id="salary" name="salary" min="0" max="100"
+                   value="50">
+        <label class="range_right" for="height">Rich</label><br>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile"><br>
+        <label for="address">Address:</label>
+        <textarea rows="2" cols="40" placeholder="insert address"
+                  id="address" name="address"></textarea><br>
+        <label for="contact">Prefered contact method:</label>
+        <input type="checkbox" id="contact" name="contact" value="email">
+        <label class="label_cb" for="contact">Email</label>
+        <input type="checkbox" id="contact" name="contact" value="whatsapp">
+        <label class="label_cb" for="contact">WhatsApp</label>
+        <input type="checkbox" id="contact" name="contact" value="inApp">
+        <label class="label_cb" for="contact">In-app chat</label><br>
+      </fieldset>
+      <input type="submit" value="Submit Form">
+    </form>
+  </body>
+</html>
